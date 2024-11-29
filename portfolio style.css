@@ -1,0 +1,749 @@
+/* Basic body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #5f6fa6, #4a5c98, #6a5c9c, #594a86);
+    color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.hero-text {
+    flex: 1;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Typewriter Effect */
+.typewriter {
+    font-size: 1.5em;
+    overflow: hidden;
+    border-right: 0.15em solid #4b9dcf;
+    white-space: nowrap;
+    animation: typing 2.5s steps(30, end) forwards, blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* Hero Section Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px; /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4b9dcf; /* Main button color */
+    border: none;
+    border-radius: 30px; /* Rounded edges */
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background-color: #3a81a8; /* Darker shade on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* General Styles */
+body {
+    transition: background 0.5s ease, color 0.5s ease, font-size 0.2s ease;
+  }
+  
+
+  /* Dark Mode */
+  body.dark-mode {
+    background: linear-gradient(135deg, #0f052c, #301860);
+    color: #ffffff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+  
+  
+  /* Accessibility Buttons */
+  .accessibility-buttons {
+    margin-top: 20px; /* Adds space above the accessibility buttons */
+  }
+  
+  .accessibility-buttons button {
+    background-color: #4a5c98;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .accessibility-buttons button:hover {
+    background-color: #3a4b78;
+    transform: scale(1.1);
+  }
+  
+  /* Audio Section Styling */
+  #audio-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px; /* Centered and restricted width */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+  }
+  
+  #audio-player {
+    width: 100%; /* Ensures the audio player is responsive */
+    margin: 10px 0;
+  }
+  
+  #audio-section figcaption {
+    font-size: 0.9em;
+    color: #ffffff;
+  }
+  
+  /* Dark Mode for Audio Section */
+  body.dark-mode #audio-section {
+    color: #ffffff;
+  }
+  
+  body.dark-mode #audio-section figcaption {
+    color: #dddddd;
+  }
+  
+
+/* My Root color variables for cosmic dreamy theme */
+:root {
+    --navbar-bg: #1f004e;         /* Dark cosmic purple background */
+    --link-color: #c4a7e7;        /* Light pastel purple for links */
+    --hover-bg: #aa9fdf;          /* Soft purple-pink for hover background */
+    --hover-text-color: #ffffff;  /* White text on hover */
+    --active-bg: #b58aff;         /* Bright lavender for active link background */
+    --active-text-color: #ffffff; /* White text for active link */
+}
+
+/* Top navigation bar styling */
+#topnav {
+    background-color: var(--navbar-bg, #ffffff);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+    color: var(--link-color, #333333);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px; /* Subtle rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+    background-color: var(--hover-bg, #e0e0e0);
+    color: var(--hover-text-color, #000000);
+}
+
+/* Style the active/current link */
+#topnav a.active {
+    background-color: var(--active-bg, #0073e6);
+    color: var(--active-text-color, #ffffff);
+}
+
+
+/* About Me Section */
+.about-me {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-me h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* About Me Content Layout */
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Text styling */
+.about-me-text {
+    flex: 1;
+    padding-left: 20px; /* Spacing between image and text */
+    text-align: left;
+}
+
+.about-me-text p {
+    line-height: 1.6; /* Increase line height for better readability */
+    font-size: 1.1em;
+}
+
+.about-me-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* Image styling */
+.about-me-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #4b9dcf; /* Add border for image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero image styling */
+.hero-image img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+/* Professional Experience Section */
+.experience {
+  padding: 60px 20px;
+  color: #ffffff;
+}
+
+.experience h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Timeline Item */
+.timeline-item {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Date Styling */
+.timeline-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c4a7e7; /* Light purple for the date */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure it'll take up the full height of the container */
+}
+
+
+/* Content Styling */
+.timeline-content {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #d1c7e1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.timeline-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.timeline-content h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.timeline-content p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #eeeeee;
+}
+
+/* Bullet Point Styling */
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.timeline-content ul li {
+  margin-bottom: 10px;
+  color: #d1c7e1;
+}
+
+  
+  .certifications {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Certification Styling */
+  .certifications h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  
+  .certification-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .certification-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #9caee9; 
+  }
+  
+  .certification-card img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the images maintain aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  .certification-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #4a5c98;
+  }
+  
+  .certification-card p {
+    color: #555;
+    font-size: 1em;
+  }
+  
+  /* Hover effect */
+  .certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+ /* General styling for projects section */
+.projects {
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Card container to hold all cards */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    gap: 20px; /* Adds spacing between cards */
+}
+
+/* General card styling */
+.project-card {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Logo container */
+.project-card .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; 
+    height: 70px; 
+    margin-bottom: 15px; /* Adds space below the logo */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    border-radius: 50%; /* Makes the container circular */
+    background: #fff; 
+}
+
+/* Logo image styling */
+.project-card .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle */
+}
+
+/* Heading and text styling */
+.project-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+/* Hover effect for the cards */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the button */
+.info-button {
+    background-color: #4a5c98;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #3a4b78; /* Darker shade for hover */
+}
+
+/* General Styling for the Photos Section */
+.photo.gallery {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(221, 143, 225, 0.3);
+    color: #ffffff;
+
+  }
+  
+  /* Heading Styling */
+  .photo.gallery h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+  
+  /* Container Styling */
+  .photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual Photo Card Styling */
+  .photo-card {
+    width: calc(33% - 20px);
+    background: rgba(102, 81, 125, 0.9); /* Slightly transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .photo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image Styling */
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Description Styling */
+  .description {
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  /* Alt Text Button Styling */
+  .alt-text-button {
+    background-color: #4a5c98;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .alt-text-button:hover {
+    background-color: #3a4b78;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .photo-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photo-card {
+      width: 100%;
+    }
+  }
+  
+/* General Styling for the Contact Section */
+.contact {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(234, 129, 229, 0.3);
+    color: #ffffff;
+  }
+  
+  /* Heading Styling */
+  .contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+  
+  /* Form Styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-group label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  button {
+    background-color: #4a5c98;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: center;
+  }
+  
+  button:hover {
+    background-color: #3a4b78;
+    transform: scale(1.05);
+  }
+  
+  /* Contact Info Cards Styling */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: rgba(41, 41, 41, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 48%;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.2em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  
+  .footer {
+    background: linear-gradient(135deg, #1b1f3b, #4a4e69); /* Cosmic dreamy gradient */
+    color: white;
+    padding: 20px 0; /* Spacing for the footer */
+    margin-top: 40px; /* Space above footer */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ddd; /* Subtle white text for copyright */
+  }
+  
+  .linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0072b1, #005983); /* LinkedIn-themed gradient */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s ease-in-out;
+  }
+  
+  .linkedin-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust size of the LinkedIn icon */
+  }
+  
+  .linkedin-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #005983, #0072b1); /* Reversed hover effect */
+  }
+  
+  .footer a.linkedin-btn:hover i {
+    color: #f0f0f0; /* Subtle lighter icon hover */
+  }
+  
+
+html {
+    scroll-behavior: smooth;
+}
