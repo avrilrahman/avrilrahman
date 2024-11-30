@@ -1,0 +1,918 @@
+/* Basic body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #5f6fa6, #4a5c98, #6a5c9c, #594a86);
+    color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.hero-text {
+  flex: 1;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Typewriter Effect */
+.typewriter {
+  font-size: 1.5em;
+  overflow: hidden;
+  border-right: 0.15em solid #4b9dcf;
+  white-space: nowrap;
+  animation: typing 2.5s steps(30, end) forwards, blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+/* Hero Section Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4b9dcf; /* Main button color */
+  border: none;
+  border-radius: 30px; /* Rounded edges */
+  text-align: center;
+  text-decoration: none; /* Removes underline */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Button Hover Effect */
+.button:hover {
+  background-color: #3a81a8; /* Darker shade on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* General Styles */
+body {
+  transition: background 0.5s ease, color 0.5s ease, font-size 0.2s ease;
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f052c, #301860);
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+
+/* Accessibility Buttons */
+.accessibility-buttons {
+  margin-top: 20px; /* Adds space above the accessibility buttons */
+}
+
+.accessibility-buttons button {
+  background-color: #4a5c98;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accessibility-buttons button:hover {
+  background-color: #3a4b78;
+  transform: scale(1.1);
+}
+
+/* Audio Section Styling */
+#audio-section {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px; /* Centered and restricted width */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+#audio-player {
+  width: 100%; /* Ensures the audio player is responsive */
+  margin: 10px 0;
+}
+
+#audio-section figcaption {
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+/* Dark Mode for Audio Section */
+body.dark-mode #audio-section {
+  color: #ffffff;
+}
+
+body.dark-mode #audio-section figcaption {
+  color: #dddddd;
+}
+
+/* Existing styles remain the same */
+
+@media (max-width: 768px) {
+  /* Adjust the flex direction for smaller screens */
+  .hero {
+    flex-direction: column;
+    padding: 20px; /* Adjust padding */
+    align-items: center;
+  }
+
+  .hero-text {
+    padding-left: 0; /* Remove padding for better fit */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add space below text */
+  }
+
+  .hero-text h1 {
+    font-size: 2em; /* Adjust font size */
+  }
+
+  /* Resize the hero image */
+  .hero-image img {
+    width: 200px; /* Make the image smaller */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Adjust typewriter font size */
+  .typewriter {
+    font-size: 1.2em; /* Reduce size */
+  }
+
+  /* Adjust button layout */
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    margin-top: 15px; /* Adjust spacing */
+  }
+
+  .button {
+    font-size: 12px; /* Adjust font size */
+    padding: 10px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .hero-text h1 {
+    font-size: 1.5em; /* Reduce font size further */
+  }
+
+  .hero-image img {
+    width: 150px; /* Make the image even smaller */
+  }
+
+  .typewriter {
+    font-size: 1em; /* Adjust font size */
+  }
+
+  .button {
+    font-size: 10px; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust padding */
+  }
+}
+
+
+/* My Root color variables for cosmic dreamy theme */
+:root {
+    --navbar-bg: #1f004e;         /* Dark cosmic purple background */
+    --link-color: #c4a7e7;        /* Light pastel purple for links */
+    --hover-bg: #aa9fdf;          /* Soft purple-pink for hover background */
+    --hover-text-color: #ffffff;  /* White text on hover */
+    --active-bg: #b58aff;         /* Bright lavender for active link background */
+    --active-text-color: #ffffff; /* White text for active link */
+}
+
+/* Top navigation bar styling */
+#topnav {
+  background-color: var(--navbar-bg, #ffffff);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+  color: var(--link-color, #333333);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+  background-color: var(--hover-bg, #e0e0e0);
+  color: var(--hover-text-color, #000000);
+}
+
+/* Style the active/current link */
+#topnav a.active {
+  background-color: var(--active-bg, #0073e6);
+  color: var(--active-text-color, #ffffff);
+}
+
+/* Mobile menu toggle button */
+#menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  #topnav {
+    flex-direction: row; /* Keep the layout horizontal */
+    justify-content: space-around; /* Space out the links */
+    align-items: center; /* Center the items */
+    padding: 5px 0; /* Adjust padding */
+    overflow-x: auto; /* Allow horizontal scrolling */
+  }
+
+  #topnav a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px 10px; /* Adjust padding */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  /* Add a slight margin between links */
+  #topnav a + a {
+    margin-left: 10px;
+  }
+}
+
+
+
+
+/* About Me Section */
+.about-me {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me Header */
+.about-me h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* About Me Content Layout */
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Text styling */
+.about-me-text {
+  flex: 1;
+  padding-left: 20px; /* Spacing between image and text */
+  text-align: left;
+}
+
+.about-me-text p {
+  line-height: 1.6; /* Increase line height for better readability */
+  font-size: 1.1em;
+}
+
+.about-me-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Image styling */
+.about-me-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 5px solid #4b9dcf; /* Add border for image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero image styling */
+.hero-image img {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .about-me {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .about-me h3 {
+      font-size: 2em; /* Slightly smaller font size */
+  }
+
+  .about-me-text p {
+      font-size: 1em; /* Adjust font size for better readability */
+  }
+
+  .about-me-content {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center content */
+      text-align: center; /* Center text */
+  }
+
+  .about-me-text {
+      padding-left: 0; /* Remove padding for smaller screens */
+      text-align: center; /* Center align text */
+  }
+
+  .about-me-image img {
+      width: 150px; /* Smaller image size for mobile */
+  }
+}
+
+/* Professional Experience Section */
+.experience {
+  padding: 60px 20px;
+  color: #ffffff;
+}
+
+/* Heading */
+.experience h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Timeline Item */
+.timeline-item {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start; /* Align content and date at the top */
+  gap: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Date Styling */
+.timeline-date {
+  min-width: 150px; /* Ensures consistent width for all dates */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c4a7e7; /* Light purple for the date */
+  text-align: right; /* Align dates to the right */
+  display: flex;
+  align-items: flex-start; /* Align the date at the top */
+  justify-content: flex-start;
+  margin-top: 5px; /* Adds spacing from the top */
+}
+
+/* Content Styling */
+.timeline-content {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #d1c7e1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.timeline-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.timeline-content h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.timeline-content p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #eeeeee;
+}
+
+/* Bullet Point Styling */
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.timeline-content ul li {
+  margin-bottom: 10px;
+  color: #d1c7e1;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column; /* Stack items vertically */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .timeline-date {
+    font-size: 1em; /* Adjust font size */
+    margin-bottom: 10px; /* Reduce space */
+  }
+
+  .timeline-content {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .timeline-content p {
+    font-size: 1em; /* Adjust paragraph size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-item {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .timeline-date {
+    font-size: 0.9em; /* Further adjust font size */
+  }
+
+  .timeline-content {
+    padding: 8px; /* Further reduce padding */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3em; /* Adjust heading size */
+  }
+
+  .timeline-content p {
+    font-size: 0.9em; /* Adjust paragraph size */
+  }
+}
+
+
+
+  .certifications {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Certification Styling */
+  .certifications h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  
+  .certification-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .certification-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #9caee9; 
+  }
+  
+  .certification-card img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the images maintain aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  .certification-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #4a5c98;
+  }
+  
+  .certification-card p {
+    color: #555;
+    font-size: 1em;
+  }
+  
+  /* Hover effect */
+  .certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+/* General styling for projects section */
+.projects {
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Card container to hold all cards */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  gap: 20px; /* Adds spacing between cards */
+}
+
+/* General card styling */
+.project-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: center;
+  text-align: center;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Styling for the date element */
+.project-card .date {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff; /* Adjust color as needed */
+  margin-bottom: 15px; /* Space between date and the rest of the content */
+  width: 100%; /* Ensures full width */
+  text-align: center; /* Center-aligns the date */
+  order: -1; /* Places the date at the top of the card */
+}
+
+/* Logo container */
+.project-card .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; 
+  height: 70px; 
+  margin-bottom: 15px; /* Adds space below the logo */
+  overflow: hidden; /* Ensures the image stays within the circle */
+  border-radius: 50%; /* Makes the container circular */
+  background: #fff; 
+}
+
+/* Logo image styling */
+.project-card .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the circle */
+}
+
+/* Heading and text styling */
+.project-card h3 {
+  font-size: 1.6em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 1em;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+/* Hover effect for the cards */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the button */
+.info-button {
+  background-color: #4a5c98;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #3a4b78; /* Darker shade for hover */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+  }
+
+  .project-card {
+    padding: 15px; /* Adjust padding to fit better on smaller screens */
+  }
+
+  .project-card h3 {
+    font-size: 1.4em; /* Slightly smaller heading for mobile */
+  }
+
+  .project-card p {
+    font-size: 0.9em; /* Adjust font size for better readability */
+  }
+}
+
+
+/* General Styling for the Photos Section */
+.photo.gallery {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(221, 143, 225, 0.3);
+    color: #ffffff;
+
+  }
+  
+  /* Heading Styling */
+  .photo.gallery h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+  
+  /* Container Styling */
+  .photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual Photo Card Styling */
+  .photo-card {
+    width: calc(33% - 20px);
+    background: rgba(102, 81, 125, 0.9); /* Slightly transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .photo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image Styling */
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Description Styling */
+  .description {
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  /* Alt Text Button Styling */
+  .alt-text-button {
+    background-color: #4a5c98;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .alt-text-button:hover {
+    background-color: #3a4b78;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .photo-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photo-card {
+      width: 100%;
+    }
+  }
+  
+/* General Styling for the Contact Section */
+.contact {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(234, 129, 229, 0.3);
+    color: #ffffff;
+  }
+  
+  /* Heading Styling */
+  .contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+  
+  /* Form Styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-group label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  button {
+    background-color: #4a5c98;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: center;
+  }
+  
+  button:hover {
+    background-color: #3a4b78;
+    transform: scale(1.05);
+  }
+  
+  /* Contact Info Cards Styling */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: rgba(41, 41, 41, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 48%;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.2em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  
+
+html {
+    scroll-behavior: smooth;
+}
