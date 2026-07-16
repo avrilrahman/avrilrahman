@@ -14,6 +14,8 @@ I enjoy taking on new projects that expand my skill set and challenge me to keep
 
 👩🏻‍💻💻 I'm also a big advocate for Women in Tech and creating inclusive spaces for other students and early-career professionals to grow, learn, and creating lasting connections. 
 
+Yes, I love cats.
+
 ## Connect with me! 
 
 - LinkedIn: https://www.linkedin.com/in/avril-rahman-16349a213/
