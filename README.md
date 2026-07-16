@@ -2,7 +2,11 @@
 
 
 I'm a Business Technology Management Co-op Graduate from Toronto Metropolitan University!
-Over the past 5 years, I've gained hands-on experience in IT support, process improvement, developing software solutions, and data systems at Tridel and Ontario Power Generation. I enjoy collaborating, working cross-functionally, and creating impact together. 
+
+Over the past 5 years, I've gained hands-on experience in IT support, process improvement, developing software solutions, and data systems at Tridel and Ontario Power Generation. 
+
+With my experience in co-op and student projects, I developed a passion for collaboration, working cross-functionally, and creating impact together. 
+
 With that, I've also had the opportunity to have an exchange semester at Chung-Ang University in South Korea! My favourite thing to eat there was kbbq 🥘
 
 I enjoy taking on new projects that expand my skill set and challenge me to keep growing. 
