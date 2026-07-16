@@ -16,8 +16,8 @@ I enjoy taking on new projects that expand my skill set and challenge me to keep
 
 ## Connect with me! 
 
-LinkedIn: https://www.linkedin.com/in/avril-rahman-16349a213/
-Email: avrilrahman04@gmail.com
+- LinkedIn: https://www.linkedin.com/in/avril-rahman-16349a213/
+- Email: avrilrahman04@gmail.com
 
 
 ## Tech Stack
